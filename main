@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Wedding</h1>
+        <p>Save the Date: August 07, 2024</p>
+    </header>
+
+    <main>
+        <h2>Countdown</h2>
+        <p id="countdown"></p>
+
+        <h2>Agenda</h2>
+        <p>1. Ceremony</p>
+        <p>2. Reception</p>
+        <p>3. Dinner</p>
+        <!-- Add more events as needed -->
+
+        <h2>Location</h2>
+        <p>Restaraunt Amir, Samarkand, Uzbekistan</p>
+
+        <h2>Calendar</h2>
+        <iframe src="https://calendar.google.com/calendar/embed?src=your-email%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </main>
+
+    <footer>
+        <p>© 2024 Our Wedding | Website by Your Name</p>
+    </footer>
+
+    <script>
+        // Adjust the date to your wedding date
+        var weddingDate = new Date("August 07, 2024");
+
+        function updateCountdown() {
+            var currentDate = new Date();
+            var timeDifference = weddingDate - currentDate;
+
+            var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
