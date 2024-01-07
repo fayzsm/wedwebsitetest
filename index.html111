@@ -6,7 +6,7 @@
     <title>Our Wedding</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Edwardian Script, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
@@ -32,6 +32,7 @@
 </head>
 <body>
     <header>
+        <h1>Fayz & Mekh</h1>
         <h1>Our Wedding</h1>
         <p>Save the Date: August 07, 2024</p>
     </header>
